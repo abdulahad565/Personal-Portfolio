@@ -406,7 +406,72 @@ footer {
   }
 }
 
-/* Smooth Scroll */
+
 html {
   scroll-behavior: smooth;
+}
+/* Navbar.css */
+.navbar {
+  background-color: #000;
+  color: #ffb700;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links li {
+  text-transform: uppercase;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ffb700;
+  font-weight: bold;
+}
+
+.menu-icon {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: #000;
+    width: 100%;
+    height: calc(100vh - 70px);
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+    font-size: 1.8rem;
+    color: #ffb700;
+  }
+
+  .menu-icon i {
+    font-size: 1.8rem;
+  }
 }
